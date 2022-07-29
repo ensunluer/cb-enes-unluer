@@ -21,7 +21,6 @@ export const UsersScreen = ({ navigation }: UserScreenProps) => {
   const fetchUsers = async () => {
     const data = await axios.get("https://dummyjson.com/users");
     if (data.data.users) dispatch({ type: SET_USER, payload: data.data.users });
-    console.log(data.data.users);
   };
 
   return (

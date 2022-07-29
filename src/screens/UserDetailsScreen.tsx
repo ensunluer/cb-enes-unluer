@@ -1,18 +1,16 @@
 import { Text, View, StyleSheet } from "react-native";
 
-export const UserDetailsScreen = ({
-  username,
-  age,
-  address,
-  postalCode,
-}: any) => {
+export const UserDetailsScreen = (props: any) => {
+
+  const { username, age, address } =  props.route.params.user;
+
   return (
+
     <View style={styles.container}>
       <View style={{ marginTop: 20 }}>
         <Text style={styles.text}>{`Username: ${username}`}</Text>
         <Text style={styles.text}>{`Age: ${age}`}</Text>
         <Text style={styles.text}>{`Address: ${address}`}</Text>
-        <Text style={styles.text}>{`PostalCode: ${postalCode}`}</Text>
       </View>
     </View>
   );

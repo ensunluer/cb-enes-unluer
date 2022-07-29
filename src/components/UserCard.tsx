@@ -32,7 +32,7 @@ export const UserCard = (props: UserCardIProps) => {
   return (
     <Pressable
       style={styles.container}
-      onPress={() => navigation.navigate("UserDetailsScreen")}
+      onPress={() => navigation.push("UserDetailsScreen", { user: props.user })}
     >
       <ImageBackground
         source={{ uri: image }}
