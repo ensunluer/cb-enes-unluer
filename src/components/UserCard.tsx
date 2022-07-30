@@ -40,7 +40,8 @@ export const UserCard = (props: UserCardIProps) => {
         resizeMode="contain"
       >
         <View style={styles.overlay}>
-          <Text style={styles.users}>{`${username} , ${age}`}</Text>
+          <Text style={styles.users}>{username}</Text>
+          <Text style={styles.users}>{age}</Text>
         </View>
         <Pressable style={styles.close} onPress={() => deleteUser(id)}>
           <FontAwesome name="close" size={20} />
